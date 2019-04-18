@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `RentACar`.`Carro` (
   `CarroKilometraje` INT(10) NULL,
   `CarroEstado` VARCHAR(10) NULL,
   PRIMARY KEY (`CarroId`),
-ONSTRAINT check_carroEstado CHECK (CarroEstado in ('Alquilado', 'Disponible')),
+CONSTRAINT check_carroEstado CHECK (CarroEstado in ('Alquilado', 'Disponible')),
   UNIQUE INDEX `CarroId_UNIQUE` (`CarroId` ASC) VISIBLE)
 ENGINE = InnoDB;
 
